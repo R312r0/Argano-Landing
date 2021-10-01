@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property='og:title' content="Argano">
+    <meta property='og:site_name' content="Argano DEX">
+    <meta property='og:description' content="Argano is the decentralized protocol for yield generation, portfolio management, and full-featured DEX trading">
+    <meta property='og:image' content="./images/logo_meta.png">
+    <title>Argano</title>
+    <link rel="icon" href="./favicon.ico">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/animation.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="./js/main.js"></script>
+</head>
+<body class="loading" >
+    
+    <div class="loadingWindow">
+        <lottie-player src="animations/Logo_Argano_0,9s.json" background="transparent"  speed="1" loop autoplay></lottie-player>
+        <!-- <img src='./images/loadingLogo.svg' alt='' class="loadingWindow__logo"/> -->
+        <div  class="loadingWindow__bar">
+            <div id='Bar' class="loadingWindow__bar__line"></div>
+        </div>
+    </div>
+    <script>
+        loading();
+    </script>
+    <div class="firstSection__canvasBg">
+        <lottie-player id="firstAnimationMobile" src="animations/animation_2_square_small_CANVAS.json" background="transparent"  speed="1" loop autoplay></lottie-player>
+        <lottie-player id="firstAnimation" src="animations/animation_2_optimize_small_CANVAS.json" background="transparent"  speed="1" loop autoplay></lottie-player>
+    </div>
+    <section class="firstSection container">
+        <div class="mobile__menu mobile__menu--close" id="menuMobile">
+            <span class="mobile__menu__exit" id="closeIcon">
+                <img src='./images/Exit.svg' alt='exit'/>
+            </span>
+            <div class="mobile__menu__logo">
+                <img src='./images/mobileLogo.svg' alt='logo'/>
+                <span>ARGANO</span>
+            </div>
+            
+            <div class="mobile__menu__links">
+                <a class="mobile_links_a animate" href="#about">About</a>
+                <a class="mobile_links_a animate" href="#team">Team</a>
+                <a class="mobile_links_a animate" href="#roadmap">Road map</a>
+                <a class="mobile_links_a animate" href="https://github.com/Tibereum/obelisk-audits/blob/main/Argano.pdf">Audit</a>
+                <a class="mobile_links_a animate" href="https://argano-1.gitbook.io/argano-ecosystem/" target="_blank" >
+                    Documentation 
+                </a>
+                <span><a href="https://drive.google.com/file/d/1UChxQ1Jzxx7GwRERkJmWNfvOaQXyDa33/view?usp=sharing"><img src='./images/doc.svg'/></a></span>
+            </div>
+            <ul class="mobile__menu__social">
+                <li class="mobile__menu__social__li">
+                    <a href="#">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.0012 9.45395e-07C4.92303 -0.00252373 0 5.05187 0 11.2903C0 16.2235 3.07966 20.417 7.36856 21.9571C7.94615 22.106 7.85767 21.6844 7.85767 21.3966V19.44C4.5224 19.8414 4.38722 17.5742 4.16356 17.1955C3.71132 16.4028 2.64216 16.2008 2.96168 15.8221C3.72115 15.4207 4.49536 15.9231 5.39247 17.2839C6.04134 18.2711 7.30712 18.1044 7.94861 17.9403C8.08871 17.347 8.38856 16.8168 8.80148 16.4053C5.34577 15.7691 3.90549 13.6029 3.90549 11.0278C3.90549 9.77806 4.30611 8.62933 5.09262 7.70278C4.59122 6.17535 5.13931 4.86757 5.21305 4.67317C6.64105 4.54189 8.12557 5.72343 8.24109 5.81685C9.05217 5.59215 9.97877 5.47349 11.016 5.47349C12.0581 5.47349 12.9872 5.5972 13.8056 5.82442C14.0833 5.6073 15.4597 4.59238 16.787 4.71609C16.8582 4.91049 17.394 6.18797 16.9221 7.6952C17.7185 8.62428 18.124 9.78311 18.124 11.0353C18.124 13.6156 16.6739 15.7843 13.2084 16.4104C13.5052 16.7102 13.7409 17.0678 13.9017 17.4623C14.0624 17.8568 14.1451 18.2802 14.1448 18.7078V21.5481C14.1645 21.7753 14.1448 22 14.5135 22C18.8663 20.4928 22 16.269 22 11.2929C22 5.05187 17.0745 9.45395e-07 11.0012 9.45395e-07Z" fill="white" fill-opacity="0.6"/>
+                        </svg>
+                    </a>
+                </li>   
+                <li class="mobile__menu__social__li">
+                    <a href="#">
+                        <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.16 0H0.84C0.375375 0 0 0.375375 0 0.84V20.16C0 20.6246 0.375375 21 0.84 21H20.16C20.6246 21 21 20.6246 21 20.16V0.84C21 0.375375 20.6246 0 20.16 0ZM17.22 5.39963L16.149 6.426C16.0545 6.49687 16.0099 6.61238 16.0282 6.72525V14.2774C16.0099 14.3929 16.0545 14.5084 16.149 14.5766L17.199 15.603V15.8314H11.928V15.6135L13.0121 14.5609C13.1198 14.4532 13.1197 14.4217 13.1197 14.2616V8.15062L10.101 15.8051H9.69412L6.18187 8.15062V13.2825C6.15037 13.4977 6.2265 13.7156 6.37875 13.8705L7.791 15.5794V15.8077H3.78V15.5794L5.19225 13.8705C5.26666 13.7936 5.32203 13.7004 5.35394 13.5983C5.38585 13.4962 5.3934 13.3881 5.376 13.2825V7.35C5.39437 7.18462 5.33137 7.0245 5.20537 6.91162L3.95062 5.39963V5.17125H7.84875L10.857 11.7731L13.5056 5.1765H17.22V5.39963Z" fill="white" fill-opacity="0.6"/>
+                        </svg>
+                    </a>
+                </li>   
+                <li class="mobile__menu__social__li">
+                    <a href="#">
+                        <svg width="21" height="17" viewBox="0 0 21 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 2.01939C20.2277 2.35134 19.3873 2.59025 18.5217 2.68329C19.4204 2.15125 20.0934 1.31072 20.4145 0.319389C19.5711 0.819302 18.6473 1.16985 17.6838 1.35548C17.2811 0.926526 16.7941 0.5848 16.2531 0.351597C15.7121 0.118394 15.1287 -0.00128703 14.5392 1.04374e-05C12.1543 1.04374e-05 10.2363 1.92634 10.2363 4.29024C10.2363 4.6222 10.2767 4.95415 10.3423 5.27353C6.77118 5.08743 3.58623 3.38743 1.46881 0.784625C1.083 1.44128 0.880818 2.18895 0.883307 2.94986C0.883307 4.43862 1.64295 5.75134 2.80135 6.52338C2.11869 6.49659 1.45201 6.30962 0.855546 5.97767V6.03048C0.855546 8.11524 2.33446 9.8429 4.30549 10.2402C3.93541 10.336 3.5547 10.385 3.17234 10.3861C2.8922 10.3861 2.62721 10.3584 2.35969 10.3207C2.90482 12.0207 4.49225 13.2555 6.38253 13.2957C4.90362 14.45 3.0512 15.129 1.03978 15.129C0.678885 15.129 0.345752 15.1164 0 15.0762C1.90794 16.2959 4.17173 17 6.60966 17C14.5241 17 18.8548 10.4666 18.8548 4.79572C18.8548 4.60962 18.8548 4.42353 18.8422 4.23743C19.6801 3.62634 20.4145 2.86939 21 2.01939Z" fill="white" fill-opacity="0.6"/>
+                        </svg>
+                    </a>
+                </li>   
+                <li class="mobile__menu__social__li">
+                    <a href="#">
+                        <svg width="19" height="22" viewBox="0 0 19 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16.7749 0H2.22515C1.93219 0.000759311 1.64224 0.0599736 1.37187 0.174262C1.1015 0.28855 0.855991 0.455674 0.649367 0.666092C0.442743 0.87651 0.27905 1.1261 0.167632 1.40061C0.056215 1.67513 -0.000744034 1.96918 7.33787e-06 2.266V17.138C7.33787e-06 18.392 0.998864 19.404 2.22515 19.404H14.5371L13.96 17.3673L15.3509 18.6768L16.664 19.9088L19 22V2.266C19.0007 1.96918 18.9438 1.67513 18.8324 1.40061C18.7209 1.1261 18.5573 0.87651 18.3506 0.666092C18.144 0.455674 17.8985 0.28855 17.6281 0.174262C17.3578 0.0599736 17.0678 0.000759311 16.7749 0ZM12.5829 14.366C12.5829 14.366 12.192 13.8936 11.8674 13.4733C13.2891 13.0657 13.832 12.1648 13.832 12.1648C13.3863 12.4613 12.9634 12.672 12.5829 12.8156C11.1974 13.4031 9.67157 13.5634 8.19657 13.2764C7.65155 13.168 7.1175 13.009 6.60114 12.8017C6.32882 12.6969 6.06416 12.5727 5.80915 12.43C5.776 12.4057 5.744 12.3964 5.712 12.3744C5.69488 12.3662 5.67969 12.3543 5.66743 12.3397C5.472 12.2308 5.36343 12.1544 5.36343 12.1544C5.36343 12.1544 5.88457 13.0344 7.264 13.4524C6.93829 13.8693 6.536 14.366 6.536 14.366C4.13715 14.2884 3.22629 12.694 3.22629 12.694C3.22629 9.152 4.78972 6.28158 4.78972 6.28158C6.35315 5.09242 7.84 5.126 7.84 5.126L7.94857 5.258C5.99429 5.83116 5.09257 6.69958 5.09257 6.69958C5.09257 6.69958 5.33257 6.56758 5.73372 6.38116C6.89486 5.86474 7.81714 5.72116 8.19771 5.68758C8.26286 5.67716 8.31771 5.66558 8.38286 5.66558C10.2654 5.40855 12.1796 5.77102 13.8434 6.69958C13.8434 6.69958 12.9851 5.87516 11.1394 5.30316L11.2914 5.12716C11.2914 5.12716 12.7794 5.09358 14.3417 6.28274C14.3417 6.28274 15.9051 9.15316 15.9051 12.6952C15.9051 12.694 14.9829 14.2884 12.5829 14.366Z" fill="white" fill-opacity="0.6"/>
+                            <path d="M7.25495 9C6.55301 9 6 9.45024 6 10C6 10.5479 6.56596 11 7.25495 11C7.9556 11 8.5086 10.5479 8.5086 10C8.52285 9.44929 7.9556 9 7.25495 9ZM11.7463 9C11.0444 9 10.4914 9.45024 10.4914 10C10.4914 10.5479 11.0574 11 11.7463 11C12.447 11 13 10.5479 13 10C12.9987 9.44929 12.447 9 11.7463 9Z" fill="white" fill-opacity="0.6"/>
+                        </svg>
+                    </a>
+                </li>   
+                <li class="mobile__menu__social__li">
+                    <a href="#">
+                        <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18.65 0.111779L0.933877 7.03576C-0.275178 7.52794 -0.268184 8.21153 0.71205 8.51636L5.2605 9.95443L15.7843 3.22489C16.2819 2.91803 16.7365 3.08311 16.3628 3.41933L7.83648 11.2183H7.83448L7.83648 11.2193L7.52273 15.971C7.98237 15.971 8.18521 15.7573 8.44301 15.5052L10.6523 13.3278L15.2477 16.768C16.095 17.241 16.7036 16.9979 16.9144 15.973L19.931 1.56402C20.2398 0.30926 19.4584 -0.258877 18.65 0.111779Z" fill="white" fill-opacity="0.6"/>
+                        </svg>
+                   </a>
+                    </a>
+                </li>   
+                <li class="mobile__menu__social__li">
+                    <a href="#">
+                        <svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19.2857 0H0.714286C0.524845 0 0.343164 0.0718343 0.209209 0.1997C0.0752549 0.327566 0 0.500989 0 0.681818V14.3182C0 14.499 0.0752549 14.6724 0.209209 14.8003C0.343164 14.9282 0.524845 15 0.714286 15H19.2857C19.4752 15 19.6568 14.9282 19.7908 14.8003C19.9247 14.6724 20 14.499 20 14.3182V0.681818C20 0.500989 19.9247 0.327566 19.7908 0.1997C19.6568 0.0718343 19.4752 0 19.2857 0ZM10.4384 8.72003C10.313 8.81305 10.1588 8.86355 10 8.86355C9.84122 8.86355 9.68696 8.81305 9.56161 8.72003L2.5692 3.52884L3.44598 2.45241L10 7.31804L16.554 2.45241L17.4308 3.52884L10.4384 8.72003Z" fill="white" fill-opacity="0.6"/>
+                        </svg>
+                    </a>
+                </li>   
+             </ul>
+        </div>
+        <header class="header">
+            <div class="header__logo desctop">
+                <img src="./images/logo-descktop.svg" alt="logo"/>
+            </div>
+            <div class="header__logo mobile">
+                <img src="./images/logo-mobile.svg" alt="logo"/>
+            </div>
+            <div class="header__menu desctop">
+                <a class="animate" href="#about">About</a>
+                <a class="animate" href="#team">Team</a>
+                <a class="animate" href="#roadmap">Road map</a>
+                <a class="animate" href="https://github.com/Tibereum/obelisk-audits/blob/main/Argano.pdf" target="_blank" >Audit</a>
+                <a href="https://argano-1.gitbook.io/argano-ecosystem/" target="_blank" class="animate">
+                    Documentation </a>
+                <span> <a href="https://drive.google.com/file/d/1UChxQ1Jzxx7GwRERkJmWNfvOaQXyDa33/view?usp=sharing"><img src='./images/doc.svg'/></a></span>
+            </div>
+            <div class="header__menu__mobile mobile" id="openMenuBlock">
+                <img src="./images/Menu.svg">
+            </div>
+            <div class="header__button desctop">
+                                    <a href="https://www.argano.io/privat-sale/"> Private Sale! </a>
+            </div>
+        </header>
+        <section id="firstAnimationSelector" class="main">
+            <div id="afterLoad" class="main__leftText">
+                <h3 class="main__leftText__h3 ">Argano is the decentralized protocol for yield generation, portfolio management, and full-featured DEX trading</h3>
+                <p class="main__leftText__text ">"Glory is in the hands of labor"</p>
+                <p class="main__leftText__subtext ">— Leonardo da Vinci</p>
+            </div>
+            <div class="main__bottom">
+                <div class="main__bottom__button mobile">
+                    <a href="https://www.argano.io/privat-sale/"> Private Sale! </a>
+                </div>
+                <ul class="main__bottom__social desctop">
+                   <li class="main__bottom__social__li">
+                       <a target="_blank" href="https://github.com/Argano-DEX/Argano-Contracts">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.0012 9.45395e-07C4.92303 -0.00252373 0 5.05187 0 11.2903C0 16.2235 3.07966 20.417 7.36856 21.9571C7.94615 22.106 7.85767 21.6844 7.85767 21.3966V19.44C4.5224 19.8414 4.38722 17.5742 4.16356 17.1955C3.71132 16.4028 2.64216 16.2008 2.96168 15.8221C3.72115 15.4207 4.49536 15.9231 5.39247 17.2839C6.04134 18.2711 7.30712 18.1044 7.94861 17.9403C8.08871 17.347 8.38856 16.8168 8.80148 16.4053C5.34577 15.7691 3.90549 13.6029 3.90549 11.0278C3.90549 9.77806 4.30611 8.62933 5.09262 7.70278C4.59122 6.17535 5.13931 4.86757 5.21305 4.67317C6.64105 4.54189 8.12557 5.72343 8.24109 5.81685C9.05217 5.59215 9.97877 5.47349 11.016 5.47349C12.0581 5.47349 12.9872 5.5972 13.8056 5.82442C14.0833 5.6073 15.4597 4.59238 16.787 4.71609C16.8582 4.91049 17.394 6.18797 16.9221 7.6952C17.7185 8.62428 18.124 9.78311 18.124 11.0353C18.124 13.6156 16.6739 15.7843 13.2084 16.4104C13.5052 16.7102 13.7409 17.0678 13.9017 17.4623C14.0624 17.8568 14.1451 18.2802 14.1448 18.7078V21.5481C14.1645 21.7753 14.1448 22 14.5135 22C18.8663 20.4928 22 16.269 22 11.2929C22 5.05187 17.0745 9.45395e-07 11.0012 9.45395e-07Z" fill="white" fill-opacity="0.6"/>
+                        </svg>
+                       </a>
+                   </li>   
+                   <li class="main__bottom__social__li">
+                       <a target="_blank" href="https://medium.com/@Argano">
+                        <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.16 0H0.84C0.375375 0 0 0.375375 0 0.84V20.16C0 20.6246 0.375375 21 0.84 21H20.16C20.6246 21 21 20.6246 21 20.16V0.84C21 0.375375 20.6246 0 20.16 0ZM17.22 5.39963L16.149 6.426C16.0545 6.49687 16.0099 6.61238 16.0282 6.72525V14.2774C16.0099 14.3929 16.0545 14.5084 16.149 14.5766L17.199 15.603V15.8314H11.928V15.6135L13.0121 14.5609C13.1198 14.4532 13.1197 14.4217 13.1197 14.2616V8.15062L10.101 15.8051H9.69412L6.18187 8.15062V13.2825C6.15037 13.4977 6.2265 13.7156 6.37875 13.8705L7.791 15.5794V15.8077H3.78V15.5794L5.19225 13.8705C5.26666 13.7936 5.32203 13.7004 5.35394 13.5983C5.38585 13.4962 5.3934 13.3881 5.376 13.2825V7.35C5.39437 7.18462 5.33137 7.0245 5.20537 6.91162L3.95062 5.39963V5.17125H7.84875L10.857 11.7731L13.5056 5.1765H17.22V5.39963Z" fill="white" fill-opacity="0.6"/>
+                        </svg>
+                       </a>
+                   </li>   
+                   <li class="main__bottom__social__li">
+                       <a target="_blank" href="https://twitter.com/argano_io">
+                            <svg width="21" height="17" viewBox="0 0 21 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21 2.01939C20.2277 2.35134 19.3873 2.59025 18.5217 2.68329C19.4204 2.15125 20.0934 1.31072 20.4145 0.319389C19.5711 0.819302 18.6473 1.16985 17.6838 1.35548C17.2811 0.926526 16.7941 0.5848 16.2531 0.351597C15.7121 0.118394 15.1287 -0.00128703 14.5392 1.04374e-05C12.1543 1.04374e-05 10.2363 1.92634 10.2363 4.29024C10.2363 4.6222 10.2767 4.95415 10.3423 5.27353C6.77118 5.08743 3.58623 3.38743 1.46881 0.784625C1.083 1.44128 0.880818 2.18895 0.883307 2.94986C0.883307 4.43862 1.64295 5.75134 2.80135 6.52338C2.11869 6.49659 1.45201 6.30962 0.855546 5.97767V6.03048C0.855546 8.11524 2.33446 9.8429 4.30549 10.2402C3.93541 10.336 3.5547 10.385 3.17234 10.3861C2.8922 10.3861 2.62721 10.3584 2.35969 10.3207C2.90482 12.0207 4.49225 13.2555 6.38253 13.2957C4.90362 14.45 3.0512 15.129 1.03978 15.129C0.678885 15.129 0.345752 15.1164 0 15.0762C1.90794 16.2959 4.17173 17 6.60966 17C14.5241 17 18.8548 10.4666 18.8548 4.79572C18.8548 4.60962 18.8548 4.42353 18.8422 4.23743C19.6801 3.62634 20.4145 2.86939 21 2.01939Z" fill="white" fill-opacity="0.6"/>
+                            </svg>
+                       </a>
+                   </li>   
+                   <li class="main__bottom__social__li">
+                       <a target="_blank" href="https://discord.com/invite/mH7PJnNCWP">
+                        <svg width="19" height="22" viewBox="0 0 19 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16.7749 0H2.22515C1.93219 0.000759311 1.64224 0.0599736 1.37187 0.174262C1.1015 0.28855 0.855991 0.455674 0.649367 0.666092C0.442743 0.87651 0.27905 1.1261 0.167632 1.40061C0.056215 1.67513 -0.000744034 1.96918 7.33787e-06 2.266V17.138C7.33787e-06 18.392 0.998864 19.404 2.22515 19.404H14.5371L13.96 17.3673L15.3509 18.6768L16.664 19.9088L19 22V2.266C19.0007 1.96918 18.9438 1.67513 18.8324 1.40061C18.7209 1.1261 18.5573 0.87651 18.3506 0.666092C18.144 0.455674 17.8985 0.28855 17.6281 0.174262C17.3578 0.0599736 17.0678 0.000759311 16.7749 0ZM12.5829 14.366C12.5829 14.366 12.192 13.8936 11.8674 13.4733C13.2891 13.0657 13.832 12.1648 13.832 12.1648C13.3863 12.4613 12.9634 12.672 12.5829 12.8156C11.1974 13.4031 9.67157 13.5634 8.19657 13.2764C7.65155 13.168 7.1175 13.009 6.60114 12.8017C6.32882 12.6969 6.06416 12.5727 5.80915 12.43C5.776 12.4057 5.744 12.3964 5.712 12.3744C5.69488 12.3662 5.67969 12.3543 5.66743 12.3397C5.472 12.2308 5.36343 12.1544 5.36343 12.1544C5.36343 12.1544 5.88457 13.0344 7.264 13.4524C6.93829 13.8693 6.536 14.366 6.536 14.366C4.13715 14.2884 3.22629 12.694 3.22629 12.694C3.22629 9.152 4.78972 6.28158 4.78972 6.28158C6.35315 5.09242 7.84 5.126 7.84 5.126L7.94857 5.258C5.99429 5.83116 5.09257 6.69958 5.09257 6.69958C5.09257 6.69958 5.33257 6.56758 5.73372 6.38116C6.89486 5.86474 7.81714 5.72116 8.19771 5.68758C8.26286 5.67716 8.31771 5.66558 8.38286 5.66558C10.2654 5.40855 12.1796 5.77102 13.8434 6.69958C13.8434 6.69958 12.9851 5.87516 11.1394 5.30316L11.2914 5.12716C11.2914 5.12716 12.7794 5.09358 14.3417 6.28274C14.3417 6.28274 15.9051 9.15316 15.9051 12.6952C15.9051 12.694 14.9829 14.2884 12.5829 14.366Z" fill="white" fill-opacity="0.6"/>
+                            <path d="M7.25495 9C6.55301 9 6 9.45024 6 10C6 10.5479 6.56596 11 7.25495 11C7.9556 11 8.5086 10.5479 8.5086 10C8.52285 9.44929 7.9556 9 7.25495 9ZM11.7463 9C11.0444 9 10.4914 9.45024 10.4914 10C10.4914 10.5479 11.0574 11 11.7463 11C12.447 11 13 10.5479 13 10C12.9987 9.44929 12.447 9 11.7463 9Z" fill="white" fill-opacity="0.6"/>
+                        </svg>
+                       </a>
+                   </li>   
+                   <li class="main__bottom__social__li">
+                       <a target="_blank" href="https://t.me/ARGANO_DEFI">
+                            <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M18.65 0.111779L0.933877 7.03576C-0.275178 7.52794 -0.268184 8.21153 0.71205 8.51636L5.2605 9.95443L15.7843 3.22489C16.2819 2.91803 16.7365 3.08311 16.3628 3.41933L7.83648 11.2183H7.83448L7.83648 11.2193L7.52273 15.971C7.98237 15.971 8.18521 15.7573 8.44301 15.5052L10.6523 13.3278L15.2477 16.768C16.095 17.241 16.7036 16.9979 16.9144 15.973L19.931 1.56402C20.2398 0.30926 19.4584 -0.258877 18.65 0.111779Z" fill="white" fill-opacity="0.6"/>
+                            </svg>
+                       </a>
+                   </li>   
+                   <li class="main__bottom__social__li">
+                       <a target="_blank" href="mailto:email@argano.io">
+                            <svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19.2857 0H0.714286C0.524845 0 0.343164 0.0718343 0.209209 0.1997C0.0752549 0.327566 0 0.500989 0 0.681818V14.3182C0 14.499 0.0752549 14.6724 0.209209 14.8003C0.343164 14.9282 0.524845 15 0.714286 15H19.2857C19.4752 15 19.6568 14.9282 19.7908 14.8003C19.9247 14.6724 20 14.499 20 14.3182V0.681818C20 0.500989 19.9247 0.327566 19.7908 0.1997C19.6568 0.0718343 19.4752 0 19.2857 0ZM10.4384 8.72003C10.313 8.81305 10.1588 8.86355 10 8.86355C9.84122 8.86355 9.68696 8.81305 9.56161 8.72003L2.5692 3.52884L3.44598 2.45241L10 7.31804L16.554 2.45241L17.4308 3.52884L10.4384 8.72003Z" fill="white" fill-opacity="0.6"/>
+                            </svg>
+                       </a>
+                   </li>   
+                </ul>
+            </div>
+        </section>
+    </section>
+    <section id="about" class="about container">
+        <h3 class="about__title title show-on-scroll">About ARGANO</h3>
+        <div class="about__titleImg">
+            <img src="./images/ABOUT.svg" alt="about"/>
+        </div>
+
+
+        <div class="about__animation about__left--first">
+            <lottie-player  id="second-animation" src="animations/animation_3_optimize_small_CANVAS.json" background="transparent"  speed="1" loop autoplay></lottie-player>
+            <lottie-player  id="second-animation-ios" src="animations/animation_3_optimize_small_CANVAS.json" background="transparent"  speed="1"></lottie-player>
+        </div>
+        <div class="about__info about__right--first">
+            <h3 class="about__info__title show-on-scroll">ARGANO DAO token</h3>
+            <p class="about__info__text show-on-scroll">AGO is the native DAO token of the Argano ecosystem, 
+                built on the ERC-20 standard and supported on the Polygon sidechain. 
+                AGO is designed to incentivize community members to participate in 
+                the liquidity mining program and the ecosystem development through governance voting.
+            </p>
+        </div>
+
+        
+        <div class="about__info about__left--second">
+            <h3 class="about__info__title show-on-scroll">Staking synthetic tokens</h3>
+            <p class="about__info__text show-on-scroll">Earn passive income with the high APR 
+                by providing your minted BTC and USD 
+                pegged assets with little to no impermanent loss risks.</p>
+            <ul class="show-on-scroll">
+                <li>
+                    <img src='./images/label.png' alt='label'/>
+                    <p>Withdraw rewards anytime</p>
+                </li>
+                <li>
+                    <img src='./images/label.png' alt='label'/>
+                    <p>Get rewarded with the native Argano token</p>
+                </li>
+                <li>
+                    <img src='./images/label.png' alt='label'/>
+                    <p>Become a Bitcoin investor directly on the Argano protocol</p>
+                </li>
+            </ul>
+            <button onclick="window.open('https://argano-1.gitbook.io/argano-ecosystem/','_blank');">Read More</button>
+        </div>
+        <div class="about__animation about__right--second">
+            <lottie-player id="third-animation" src="animations/animation_4_optimize_small_canvas.json" background="transparent"  speed="1" loop autoplay></lottie-player>
+            <lottie-player id="third-animation-ios" src="animations/animation_4_optimize_small_canvas.json" background="transparent"  speed="1"></lottie-player>
+        </div>
+
+
+        <div class="about__animation about__left--third">
+            <lottie-player id="fourth-animation" src="animations/animation_5_optimize_small_CANVAS.json" background="transparent"  speed="1" loop autoplay></lottie-player>
+            <lottie-player id="fourth-animation-ios" src="animations/animation_5_optimize_small_CANVAS.json" background="transparent"  speed="1"></lottie-player>
+        </div>
+        <div class="about__info about__right--third">
+            <h3 class="about__info__title show-on-scroll">Liquidity mining program</h3>
+            <p class="about__info__text show-on-scroll">Yield generation has never been so simple. 
+                Become a liquidity provider to earn trading 
+                fees by ensuring asset swapping. Get rewarded with the Argano DAO token.</p>
+        </div>
+
+        
+        <div class="about__info about__left--fourth">
+            <h3 class="about__info__title show-on-scroll">Leveraged synthetic tokens' trading</h3>
+            <p class="about__info__text show-on-scroll">Argano DEX makes it possible to discover decentralized 
+                cryptocurrency trading using professional tools. 
+                Increase your position size without using the whole capital. 
+                Borrow funds directly on the Argano exchange and forget about any KYC check-ups.</p>
+        </div>
+        <div class="about__animation about__right--fourth">
+            <lottie-player id="fifth-animation" src="animations/animation_1_optimize_small_CANVAS.json" background="transparent"  speed="1" loop autoplay></lottie-player>
+            <lottie-player id="fifth-animation-mobile" src="animations/animation_1_optimize_small_CANVAS.json" background="transparent"  speed="1"></lottie-player>
+        </div>
+
+
+        <div class="about__animation about__left--fifth">
+            <lottie-player id="six-animation" src="animations/animation_6_optimize_small_CANVAS.json" background="transparent"  speed="1" loop autoplay></lottie-player>
+            <lottie-player id="six-animation-ios" src="animations/animation_6_optimize_small_CANVAS.json" background="transparent"  speed="1"></lottie-player>
+        </div>
+        <div class="about__info about__right--fifth">
+            <h3 class="about__info__title show-on-scroll">Portfolio management</h3>
+            <p class="about__info__text show-on-scroll">Everything in one place:</p>
+            <div class="about__info__dotsArea show-on-scroll">
+                <ul class="about__info__dots">
+                    <li>On-chain activity</li>
+                    <li>Profit & loss analytics</li>
+                    <li>Trading activity</li>
+                </ul>
+                <ul class="about__info__dots">
+                    <li>The portfolio performance historical data</li>
+                    <li>Active pools and pending rewards</li>
+                </ul>
+            </div>
+            
+        </div>
+
+
+        <div class="about__info about__left--six">
+            <h3 class="about__info__title show-on-scroll">Argano DEX</h3>
+            <p class="about__info__text show-on-scroll">The full-featured trading platform with limitless opportunities:</p>
+            <div class="about__info__dotsArea show-on-scroll">
+                <ul class="about__info__dots">
+                    <li>No time-consuming KYC procedures</li>
+                    <li>Minimal offers slippage</li>      
+                    <li>Tokenized synthetic assets trading</li>    
+                </ul>
+                <ul class="about__info__dots">
+                    <li>Multifunctional funds’ management system powered by trading instruments</li>
+                    <li>An expanded trading system with the ability to place orders of any type</li>
+                </ul>
+            </div>
+            </ul>
+        </div>
+        <div class="about__animation about__right--six">
+            <lottie-player id="seventh-animation" src="animations/animation_7_optimize_small_CANVAS.json" background="transparent"  speed="1" loop autoplay></lottie-player>
+            <lottie-player id="seventh-animation-ios" src="animations/animation_7_optimize_small_CANVAS.json" background="transparent"  speed="1"></lottie-player>
+
+        </div>
+    
+    </section>
+
+    <section id='team' class="team container">
+        <h3 class="team__title title">Team</h3>
+        <div class="team__area">
+            <div class="team__item ">
+                <div class="team__item__photo">
+                    <img src='./images/beka.png' alt='photo'/>
+                </div>
+                <div class="team__item__name">Beka Kharebava</div>
+                <div class="team__item__position">CEO and Business development</div>
+                <div class="team__item__description">
+                    Professional trader and financial analyst, 
+                    Founder of the Russian-speaking crypto community "EASY CRYPTS".
+                    Advisor of the worldwide popular cryptocurrency exchanges Binance and EXMO.
+                </div>
+                <div class="team__item__social">
+                    <a target="_blank" href='https://www.linkedin.com/in/beka-ulis-44329b192/' target="_blank" class="team__item__social__link">
+                    <svg width="24" height="23" viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19.9587 19.3858H16.5941V14.1063C16.5941 12.8473 16.5678 11.2294 14.8346 11.2294C13.0802 11.2294 12.8129 12.595 12.8129 14.0131V19.3851H9.44403V8.52958H12.68V10.0103H12.7233C13.1754 9.15513 14.2752 8.2559 15.9159 8.2559C19.3288 8.2559 19.9622 10.5029 19.9622 13.4245V19.3851L19.9587 19.3858ZM5.63798 7.04602C5.38084 7.04611 5.12621 6.99548 4.88867 6.89701C4.65112 6.79854 4.43534 6.65418 4.25368 6.4722C4.07202 6.29021 3.92804 6.07417 3.83001 5.83646C3.73197 5.59875 3.68179 5.34403 3.68236 5.08689C3.68278 4.69987 3.79795 4.32166 4.01331 4.00008C4.22868 3.67851 4.53456 3.42801 4.89228 3.28026C5.25001 3.13251 5.64351 3.09414 6.02304 3.17001C6.40257 3.24587 6.75108 3.43257 7.02451 3.70648C7.29793 3.9804 7.484 4.32924 7.55918 4.70889C7.63436 5.08855 7.59528 5.48197 7.44687 5.83941C7.29847 6.19686 7.04741 6.50227 6.72543 6.71704C6.40345 6.93182 6.02502 7.0463 5.63798 7.04602ZM7.32561 19.3858H3.94965V8.53029H7.32561V19.3858ZM21.6477 0H2.25775C1.33148 0 0.580078 0.732894 0.580078 1.63995V21.1082C0.580078 22.0152 1.33148 22.7481 2.25775 22.7481H21.6441C22.569 22.7481 23.3282 22.0152 23.3282 21.1082V1.63995C23.3282 0.732894 22.569 0 21.6441 0H21.6477Z" fill="#BDBDBD"/>
+                    </svg>
+                    </a>
+                    <a target="_blank" href='https://t.me/easycrypts' target="_blank" class="team__item__social__link">
+                        <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18.65 0.111779L0.933877 7.03576C-0.275178 7.52794 -0.268184 8.21153 0.71205 8.51636L5.2605 9.95443L15.7843 3.22489C16.2819 2.91803 16.7365 3.08311 16.3628 3.41933L7.83648 11.2183H7.83448L7.83648 11.2193L7.52273 15.971C7.98237 15.971 8.18521 15.7573 8.44301 15.5052L10.6523 13.3278L15.2477 16.768C16.095 17.241 16.7036 16.9979 16.9144 15.973L19.931 1.56402C20.2398 0.30926 19.4584 -0.258877 18.65 0.111779Z" fill="white" fill-opacity="0.6"/>
+                            </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="team__item">
+                <div class="team__item__photo">
+                    <img src='./images/incognito.png' alt='photo'/>
+                </div>
+                <div class="team__item__name">Incognito</div>
+                <div class="team__item__position">Head of Delivery</div>
+                <div class="team__item__description">
+                    An expert in the DeFi market with 2+ years 
+                    of experience. Mid-term crypto investor.
+                     Market researcher, on-chain analyst,
+                    and financial advisor. Responsible for the
+                    development management, project management,
+                    and the creation of the economical logic.
+
+                </div>
+                <div class="team__item__social">
+                </div>
+            </div>
+
+            <div class="team__item">
+                <div class="team__item__photo">
+                    <img src='./images/Vlad.png' alt='photo'/>
+                </div>
+                <div class="team__item__name">Vladyslav Chupovskiy </div>
+                <div class="team__item__position">Tech Lead</div>
+                <div class="team__item__description">
+                    Responsible for technical logic of the
+                    protocol including the front-end
+                    and back-end parts. Has years of experience
+                    in developing smart contracts on Ethereum,
+                    BSC, and Polygon. Previously worked on developing
+                    dApps based on React.js and Web3.js.
+                </div>
+                <div class="team__item__social">
+                    <a target="_blank" href='https://www.linkedin.com/in/vladyslav-chupovskiy-48866b1b4/' target="_blank" class="team__item__social__link">
+                        <svg width="24" height="23" viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19.9587 19.3858H16.5941V14.1063C16.5941 12.8473 16.5678 11.2294 14.8346 11.2294C13.0802 11.2294 12.8129 12.595 12.8129 14.0131V19.3851H9.44403V8.52958H12.68V10.0103H12.7233C13.1754 9.15513 14.2752 8.2559 15.9159 8.2559C19.3288 8.2559 19.9622 10.5029 19.9622 13.4245V19.3851L19.9587 19.3858ZM5.63798 7.04602C5.38084 7.04611 5.12621 6.99548 4.88867 6.89701C4.65112 6.79854 4.43534 6.65418 4.25368 6.4722C4.07202 6.29021 3.92804 6.07417 3.83001 5.83646C3.73197 5.59875 3.68179 5.34403 3.68236 5.08689C3.68278 4.69987 3.79795 4.32166 4.01331 4.00008C4.22868 3.67851 4.53456 3.42801 4.89228 3.28026C5.25001 3.13251 5.64351 3.09414 6.02304 3.17001C6.40257 3.24587 6.75108 3.43257 7.02451 3.70648C7.29793 3.9804 7.484 4.32924 7.55918 4.70889C7.63436 5.08855 7.59528 5.48197 7.44687 5.83941C7.29847 6.19686 7.04741 6.50227 6.72543 6.71704C6.40345 6.93182 6.02502 7.0463 5.63798 7.04602ZM7.32561 19.3858H3.94965V8.53029H7.32561V19.3858ZM21.6477 0H2.25775C1.33148 0 0.580078 0.732894 0.580078 1.63995V21.1082C0.580078 22.0152 1.33148 22.7481 2.25775 22.7481H21.6441C22.569 22.7481 23.3282 22.0152 23.3282 21.1082V1.63995C23.3282 0.732894 22.569 0 21.6441 0H21.6477Z" fill="#BDBDBD"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="team__item">
+                <div class="team__item__photo">
+                    <img src='./images/sulkhan.png' alt='photo'/>
+                </div>
+                <div class="team__item__name">Sulkhan Inaishvili</div>
+                <div class="team__item__position">DevOps Engineer</div>
+                <div class="team__item__description">
+                    A professional full of passion for software
+                    development and especially for web applications.
+                    Responsible for developing complex,
+                    scalable, testable, and high-quality
+                    web applications with clean architecture
+                    and a fully automated continuous delivery manner.
+                </div>
+                <div class="team__item__social">
+                    <a target="_blank" href='https://www.linkedin.com/in/sulkhan-inaishvili-8879a1205/' target="_blank" class="team__item__social__link">
+                        <svg width="24" height="23" viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19.9587 19.3858H16.5941V14.1063C16.5941 12.8473 16.5678 11.2294 14.8346 11.2294C13.0802 11.2294 12.8129 12.595 12.8129 14.0131V19.3851H9.44403V8.52958H12.68V10.0103H12.7233C13.1754 9.15513 14.2752 8.2559 15.9159 8.2559C19.3288 8.2559 19.9622 10.5029 19.9622 13.4245V19.3851L19.9587 19.3858ZM5.63798 7.04602C5.38084 7.04611 5.12621 6.99548 4.88867 6.89701C4.65112 6.79854 4.43534 6.65418 4.25368 6.4722C4.07202 6.29021 3.92804 6.07417 3.83001 5.83646C3.73197 5.59875 3.68179 5.34403 3.68236 5.08689C3.68278 4.69987 3.79795 4.32166 4.01331 4.00008C4.22868 3.67851 4.53456 3.42801 4.89228 3.28026C5.25001 3.13251 5.64351 3.09414 6.02304 3.17001C6.40257 3.24587 6.75108 3.43257 7.02451 3.70648C7.29793 3.9804 7.484 4.32924 7.55918 4.70889C7.63436 5.08855 7.59528 5.48197 7.44687 5.83941C7.29847 6.19686 7.04741 6.50227 6.72543 6.71704C6.40345 6.93182 6.02502 7.0463 5.63798 7.04602ZM7.32561 19.3858H3.94965V8.53029H7.32561V19.3858ZM21.6477 0H2.25775C1.33148 0 0.580078 0.732894 0.580078 1.63995V21.1082C0.580078 22.0152 1.33148 22.7481 2.25775 22.7481H21.6441C22.569 22.7481 23.3282 22.0152 23.3282 21.1082V1.63995C23.3282 0.732894 22.569 0 21.6441 0H21.6477Z" fill="#BDBDBD"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="team__item">
+                <div class="team__item__photo">
+                    <img src='./images/george.png' alt='photo'/>
+                </div>
+                <div class="team__item__name">George Butatti </div>
+                <div class="team__item__position">Financial advisor</div>
+                <div class="team__item__description">
+                    Professional advisor, with 5+ years of
+                    experience offering his financial advisory
+                    expertise to technology companies in
+                    Silicon Valley and beyond. Has
+                    been a part of Deutsche Bank's
+                    Semiconductor Equity Research team
+                    and Comerica Bank's Technology and
+                    Life Sciences group.
+                </div>
+                <div class="team__item__social">
+                    <a target="_blank" href='https://www.linkedin.com/in/georgebutatti/' target="_blank" class="team__item__social__link">
+                        <svg width="24" height="23" viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19.9587 19.3858H16.5941V14.1063C16.5941 12.8473 16.5678 11.2294 14.8346 11.2294C13.0802 11.2294 12.8129 12.595 12.8129 14.0131V19.3851H9.44403V8.52958H12.68V10.0103H12.7233C13.1754 9.15513 14.2752 8.2559 15.9159 8.2559C19.3288 8.2559 19.9622 10.5029 19.9622 13.4245V19.3851L19.9587 19.3858ZM5.63798 7.04602C5.38084 7.04611 5.12621 6.99548 4.88867 6.89701C4.65112 6.79854 4.43534 6.65418 4.25368 6.4722C4.07202 6.29021 3.92804 6.07417 3.83001 5.83646C3.73197 5.59875 3.68179 5.34403 3.68236 5.08689C3.68278 4.69987 3.79795 4.32166 4.01331 4.00008C4.22868 3.67851 4.53456 3.42801 4.89228 3.28026C5.25001 3.13251 5.64351 3.09414 6.02304 3.17001C6.40257 3.24587 6.75108 3.43257 7.02451 3.70648C7.29793 3.9804 7.484 4.32924 7.55918 4.70889C7.63436 5.08855 7.59528 5.48197 7.44687 5.83941C7.29847 6.19686 7.04741 6.50227 6.72543 6.71704C6.40345 6.93182 6.02502 7.0463 5.63798 7.04602ZM7.32561 19.3858H3.94965V8.53029H7.32561V19.3858ZM21.6477 0H2.25775C1.33148 0 0.580078 0.732894 0.580078 1.63995V21.1082C0.580078 22.0152 1.33148 22.7481 2.25775 22.7481H21.6441C22.569 22.7481 23.3282 22.0152 23.3282 21.1082V1.63995C23.3282 0.732894 22.569 0 21.6441 0H21.6477Z" fill="#BDBDBD"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="team__item">
+                <div class="team__item__photo">
+                    <img src='./images/ruslan.png' alt='photo'/>
+                </div>
+                <div class="team__item__name">Ruslan Trif</div>
+                <div class="team__item__position">Economical logic advisor</div>
+                <div class="team__item__description">
+                    An expert with 15+ years of experience in
+                    trading, consulting,
+                    risk management, and brokerage
+                    within investment companies in
+                    global markets (US, EU, Asia, EM, Russia),
+                    including equities, derivatives, FI, FX, REPO, Crypto.
+                </div>
+                <div class="team__item__social">
+                    <a target="_blank" href='https://www.linkedin.com/mwlite/in/ruslan-t-17189482' target="_blank" class="team__item__social__link">
+                        <svg width="24" height="23" viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19.9587 19.3858H16.5941V14.1063C16.5941 12.8473 16.5678 11.2294 14.8346 11.2294C13.0802 11.2294 12.8129 12.595 12.8129 14.0131V19.3851H9.44403V8.52958H12.68V10.0103H12.7233C13.1754 9.15513 14.2752 8.2559 15.9159 8.2559C19.3288 8.2559 19.9622 10.5029 19.9622 13.4245V19.3851L19.9587 19.3858ZM5.63798 7.04602C5.38084 7.04611 5.12621 6.99548 4.88867 6.89701C4.65112 6.79854 4.43534 6.65418 4.25368 6.4722C4.07202 6.29021 3.92804 6.07417 3.83001 5.83646C3.73197 5.59875 3.68179 5.34403 3.68236 5.08689C3.68278 4.69987 3.79795 4.32166 4.01331 4.00008C4.22868 3.67851 4.53456 3.42801 4.89228 3.28026C5.25001 3.13251 5.64351 3.09414 6.02304 3.17001C6.40257 3.24587 6.75108 3.43257 7.02451 3.70648C7.29793 3.9804 7.484 4.32924 7.55918 4.70889C7.63436 5.08855 7.59528 5.48197 7.44687 5.83941C7.29847 6.19686 7.04741 6.50227 6.72543 6.71704C6.40345 6.93182 6.02502 7.0463 5.63798 7.04602ZM7.32561 19.3858H3.94965V8.53029H7.32561V19.3858ZM21.6477 0H2.25775C1.33148 0 0.580078 0.732894 0.580078 1.63995V21.1082C0.580078 22.0152 1.33148 22.7481 2.25775 22.7481H21.6441C22.569 22.7481 23.3282 22.0152 23.3282 21.1082V1.63995C23.3282 0.732894 22.569 0 21.6441 0H21.6477Z" fill="#BDBDBD"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="team__item">
+                <div class="team__item__photo">
+                    <img src='./images/zauri.png' alt='photo'/>
+                </div>
+                <div class="team__item__name">Zauri Kharebava</div>
+                <div class="team__item__position">Business Development Manager</div>
+                <div class="team__item__description">
+                    International lawyer and a business
+                    development manager with more than
+                    12 years of experience working in
+                    the industry. Responsible for the
+                    legal side of the project, expert
+                    market research, business processes
+                    management, risk mitigation, partnership
+                    establishment, business development strategies, and more.
+                </div>
+                <div class="team__item__social">
+                </div>
+            </div>
+
+            <div class="team__item">
+                <div class="team__item__photo">
+                    <img src='./images/sergey.png' alt='photo'/>
+                </div>
+                <div class="team__item__name">Serghei Istratenko</div>
+                <div class="team__item__position">UI/UX designer</div>
+                <div class="team__item__description">
+                    A weathered graphic designer and a true
+                    expert that has experience working
+                    with about every imaginable branch of
+                    design, including interfaces,
+                    dashboards, mobile applications,
+                    corporate websites, landing pages, and more.
+                </div>
+                <div class="team__item__social">
+                    <a target="_blank" href='https://www.linkedin.com/in/serghei-istratenko-12605b219/' target="_blank" class="team__item__social__link">
+                        <svg width="24" height="23" viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19.9587 19.3858H16.5941V14.1063C16.5941 12.8473 16.5678 11.2294 14.8346 11.2294C13.0802 11.2294 12.8129 12.595 12.8129 14.0131V19.3851H9.44403V8.52958H12.68V10.0103H12.7233C13.1754 9.15513 14.2752 8.2559 15.9159 8.2559C19.3288 8.2559 19.9622 10.5029 19.9622 13.4245V19.3851L19.9587 19.3858ZM5.63798 7.04602C5.38084 7.04611 5.12621 6.99548 4.88867 6.89701C4.65112 6.79854 4.43534 6.65418 4.25368 6.4722C4.07202 6.29021 3.92804 6.07417 3.83001 5.83646C3.73197 5.59875 3.68179 5.34403 3.68236 5.08689C3.68278 4.69987 3.79795 4.32166 4.01331 4.00008C4.22868 3.67851 4.53456 3.42801 4.89228 3.28026C5.25001 3.13251 5.64351 3.09414 6.02304 3.17001C6.40257 3.24587 6.75108 3.43257 7.02451 3.70648C7.29793 3.9804 7.484 4.32924 7.55918 4.70889C7.63436 5.08855 7.59528 5.48197 7.44687 5.83941C7.29847 6.19686 7.04741 6.50227 6.72543 6.71704C6.40345 6.93182 6.02502 7.0463 5.63798 7.04602ZM7.32561 19.3858H3.94965V8.53029H7.32561V19.3858ZM21.6477 0H2.25775C1.33148 0 0.580078 0.732894 0.580078 1.63995V21.1082C0.580078 22.0152 1.33148 22.7481 2.25775 22.7481H21.6441C22.569 22.7481 23.3282 22.0152 23.3282 21.1082V1.63995C23.3282 0.732894 22.569 0 21.6441 0H21.6477Z" fill="#BDBDBD"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>        
+    </section>
+
+    <section class="roadmap container" id="roadmap">
+        <h3 class="roadmap__title title show-on-scroll">2021 Roadmap</h3>
+        <div class="roadmap__row__area">
+            <div class="roadmap__row__title show-on-scroll">Q1</div>
+            <div class="roadmap__row show-on-scroll">
+                <div class="roadmap__row__item roadmap-done">
+                    Coordination of ideas, determination of the protocol development vector, and business logic creation.
+                </div>
+                <div class="roadmap__row__item roadmap-done">
+                    Financial and economic consulting, advice adoption.
+                </div>
+                <div class="roadmap__row__item roadmap-done">
+                    Smart contract development.
+                </div>
+                <div class="roadmap__row__item roadmap-done">
+                    Rendering layouts, creation of the unified corporate design, branding, and rebranding.
+                </div>
+                <div class="roadmap__row__item roadmap-done">
+                    Abstention from launching on the Ethereum blockchain due to high gas fees at that moment, rewriting smart contracts for the Polygon sidechain network.
+                </div>
+            </div>    
+        </div>
+
+        <div class="roadmap__row__area">
+            <div class="roadmap__row__title show-on-scroll">Q2</div>
+            <div class="roadmap__row show-on-scroll">
+                <div class="roadmap__row__item roadmap-done">
+                    Argano synthetic dollar logic creation, code implementation, and testing.
+                </div>
+                <div class="roadmap__row__item roadmap-done">
+                    Adjustment of the same logic for the Argano synthetic bitcoin, testing.
+                </div>
+                <div class="roadmap__row__item roadmap-done">
+                    Dashboard visual and technical improvements.
+                </div>
+                <div class="roadmap__row__item roadmap-done">
+                    <p>Development of the Argano personal account page for the portfolio management feature:</p>
+                    <p>- P & L processing and storage of historical data</p>
+                    <p>- Portfolio performance data</p>
+                    <p>- Asset pool management functionality</p>
+                </div>
+                <div class="roadmap__row__item roadmap-done">
+                    dApp development, tests of smart contract interaction.
+                </div>
+                <div class="roadmap__row__item roadmap-done">
+                    Testing, troubleshooting and error correctiondiv
+                </div>
+            </div>    
+        </div>
+
+        <div class="roadmap__row__area">
+            <div class="roadmap__row__title show-on-scroll">Q3</div>
+            <div class="roadmap__row show-on-scroll">
+                <div class="roadmap__row__item roadmap-done">
+                    Agreement with the leading blockchain security service, Obelisk, for the in-depth audit within the manual code review, static and on-chain analysis
+                </div>
+                <div class="roadmap__row__item roadmap-done">
+                    The final stage of the smart contracts testing before going live
+                </div>
+                <div class="roadmap__row__item">
+                    Pre-fundraising event preparations, strengthening of the new partnerships, and a rollout of the promotional marketing campaign.
+                </div>
+                <div class="roadmap__row__item">
+                    Development of the other synthetic tokens and indices
+                </div>
+                <div class="roadmap__row__item">
+                    Fundraising event launch with the following stages:
+                </div>
+                <div class="roadmap__row__item">
+                    <p> Fundraising event launch with the following stages:</p>
+                    <p>-Seed stage investment</p>
+                    <p>-Community public sale event</p>
+                    <p>-Token distribution and vesting periods settlement</p>
+                </div>
+                <div class="roadmap__row__item">
+                    Protocol launch using fundraised resources for the initial liquidity support.
+                </div>
+            </div>    
+        </div>
+
+        <div class="roadmap__row__area">
+            <div class="roadmap__row__title show-on-scroll">Q4</div>
+            <div class="roadmap__row show-on-scroll">
+                <div class="roadmap__row__item">
+                    Analysis of the protocol state, determination of the possibility to migrate to Argano’s own DEX, development of the dedicated smart contracts.
+                </div>
+                <div class="roadmap__row__item">
+                    <p>Liquidity migration and primary DEX functionality:</p>
+                    <p>-Basic spot trading functionality;</p>
+                    <p>-Margin trading and Futures trading functionality creation within the gradual testing and implementation of the L2 solutions</p>
+                    <p>-Creation of the logic for subsequent synthetic tokens following community requests, introducing new trading pairs.</p>
+                </div>
+                <div class="roadmap__row__item">
+                    Multifunctional management system development and implementation, reaching the level of centralized exchanges
+                </div>
+                <div class="roadmap__row__item">
+                    Open-source code creation for connection through third-party services using API keys
+                </div>
+            </div>    
+        </div>
+    </section>
+    <footer class="footer container">
+        <div class="footer__row">
+            <div class="footer__row__smallLogo">
+                <img src='./images/footerLogo.svg' alt='logo'/>
+            </div>
+            <div class="footer__row__social">
+                <ul>
+                    <li class="footer__row__social__li">
+                        <a target="_blank" href="https://github.com/Argano-DEX/Argano-Contracts">
+                         <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                             <path d="M11.0012 9.45395e-07C4.92303 -0.00252373 0 5.05187 0 11.2903C0 16.2235 3.07966 20.417 7.36856 21.9571C7.94615 22.106 7.85767 21.6844 7.85767 21.3966V19.44C4.5224 19.8414 4.38722 17.5742 4.16356 17.1955C3.71132 16.4028 2.64216 16.2008 2.96168 15.8221C3.72115 15.4207 4.49536 15.9231 5.39247 17.2839C6.04134 18.2711 7.30712 18.1044 7.94861 17.9403C8.08871 17.347 8.38856 16.8168 8.80148 16.4053C5.34577 15.7691 3.90549 13.6029 3.90549 11.0278C3.90549 9.77806 4.30611 8.62933 5.09262 7.70278C4.59122 6.17535 5.13931 4.86757 5.21305 4.67317C6.64105 4.54189 8.12557 5.72343 8.24109 5.81685C9.05217 5.59215 9.97877 5.47349 11.016 5.47349C12.0581 5.47349 12.9872 5.5972 13.8056 5.82442C14.0833 5.6073 15.4597 4.59238 16.787 4.71609C16.8582 4.91049 17.394 6.18797 16.9221 7.6952C17.7185 8.62428 18.124 9.78311 18.124 11.0353C18.124 13.6156 16.6739 15.7843 13.2084 16.4104C13.5052 16.7102 13.7409 17.0678 13.9017 17.4623C14.0624 17.8568 14.1451 18.2802 14.1448 18.7078V21.5481C14.1645 21.7753 14.1448 22 14.5135 22C18.8663 20.4928 22 16.269 22 11.2929C22 5.05187 17.0745 9.45395e-07 11.0012 9.45395e-07Z" fill="white" fill-opacity="0.6"/>
+                         </svg>
+                        </a>
+                    </li>   
+                    <li class="footer__row__social__li">
+                        <a target="_blank" href="https://medium.com/@Argano">
+                         <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                             <path d="M20.16 0H0.84C0.375375 0 0 0.375375 0 0.84V20.16C0 20.6246 0.375375 21 0.84 21H20.16C20.6246 21 21 20.6246 21 20.16V0.84C21 0.375375 20.6246 0 20.16 0ZM17.22 5.39963L16.149 6.426C16.0545 6.49687 16.0099 6.61238 16.0282 6.72525V14.2774C16.0099 14.3929 16.0545 14.5084 16.149 14.5766L17.199 15.603V15.8314H11.928V15.6135L13.0121 14.5609C13.1198 14.4532 13.1197 14.4217 13.1197 14.2616V8.15062L10.101 15.8051H9.69412L6.18187 8.15062V13.2825C6.15037 13.4977 6.2265 13.7156 6.37875 13.8705L7.791 15.5794V15.8077H3.78V15.5794L5.19225 13.8705C5.26666 13.7936 5.32203 13.7004 5.35394 13.5983C5.38585 13.4962 5.3934 13.3881 5.376 13.2825V7.35C5.39437 7.18462 5.33137 7.0245 5.20537 6.91162L3.95062 5.39963V5.17125H7.84875L10.857 11.7731L13.5056 5.1765H17.22V5.39963Z" fill="white" fill-opacity="0.6"/>
+                         </svg>
+                        </a>
+                    </li>   
+                    <li class="footer__row__social__li">
+                        <a target="_blank" href="https://twitter.com/argano_io">
+                             <svg width="21" height="17" viewBox="0 0 21 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M21 2.01939C20.2277 2.35134 19.3873 2.59025 18.5217 2.68329C19.4204 2.15125 20.0934 1.31072 20.4145 0.319389C19.5711 0.819302 18.6473 1.16985 17.6838 1.35548C17.2811 0.926526 16.7941 0.5848 16.2531 0.351597C15.7121 0.118394 15.1287 -0.00128703 14.5392 1.04374e-05C12.1543 1.04374e-05 10.2363 1.92634 10.2363 4.29024C10.2363 4.6222 10.2767 4.95415 10.3423 5.27353C6.77118 5.08743 3.58623 3.38743 1.46881 0.784625C1.083 1.44128 0.880818 2.18895 0.883307 2.94986C0.883307 4.43862 1.64295 5.75134 2.80135 6.52338C2.11869 6.49659 1.45201 6.30962 0.855546 5.97767V6.03048C0.855546 8.11524 2.33446 9.8429 4.30549 10.2402C3.93541 10.336 3.5547 10.385 3.17234 10.3861C2.8922 10.3861 2.62721 10.3584 2.35969 10.3207C2.90482 12.0207 4.49225 13.2555 6.38253 13.2957C4.90362 14.45 3.0512 15.129 1.03978 15.129C0.678885 15.129 0.345752 15.1164 0 15.0762C1.90794 16.2959 4.17173 17 6.60966 17C14.5241 17 18.8548 10.4666 18.8548 4.79572C18.8548 4.60962 18.8548 4.42353 18.8422 4.23743C19.6801 3.62634 20.4145 2.86939 21 2.01939Z" fill="white" fill-opacity="0.6"/>
+                             </svg>
+                        </a>
+                    </li>   
+                    <li class="footer__row__social__li">
+                        <a target="_blank" href="https://discord.com/invite/mH7PJnNCWP">
+                         <svg width="19" height="22" viewBox="0 0 19 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                             <path d="M16.7749 0H2.22515C1.93219 0.000759311 1.64224 0.0599736 1.37187 0.174262C1.1015 0.28855 0.855991 0.455674 0.649367 0.666092C0.442743 0.87651 0.27905 1.1261 0.167632 1.40061C0.056215 1.67513 -0.000744034 1.96918 7.33787e-06 2.266V17.138C7.33787e-06 18.392 0.998864 19.404 2.22515 19.404H14.5371L13.96 17.3673L15.3509 18.6768L16.664 19.9088L19 22V2.266C19.0007 1.96918 18.9438 1.67513 18.8324 1.40061C18.7209 1.1261 18.5573 0.87651 18.3506 0.666092C18.144 0.455674 17.8985 0.28855 17.6281 0.174262C17.3578 0.0599736 17.0678 0.000759311 16.7749 0ZM12.5829 14.366C12.5829 14.366 12.192 13.8936 11.8674 13.4733C13.2891 13.0657 13.832 12.1648 13.832 12.1648C13.3863 12.4613 12.9634 12.672 12.5829 12.8156C11.1974 13.4031 9.67157 13.5634 8.19657 13.2764C7.65155 13.168 7.1175 13.009 6.60114 12.8017C6.32882 12.6969 6.06416 12.5727 5.80915 12.43C5.776 12.4057 5.744 12.3964 5.712 12.3744C5.69488 12.3662 5.67969 12.3543 5.66743 12.3397C5.472 12.2308 5.36343 12.1544 5.36343 12.1544C5.36343 12.1544 5.88457 13.0344 7.264 13.4524C6.93829 13.8693 6.536 14.366 6.536 14.366C4.13715 14.2884 3.22629 12.694 3.22629 12.694C3.22629 9.152 4.78972 6.28158 4.78972 6.28158C6.35315 5.09242 7.84 5.126 7.84 5.126L7.94857 5.258C5.99429 5.83116 5.09257 6.69958 5.09257 6.69958C5.09257 6.69958 5.33257 6.56758 5.73372 6.38116C6.89486 5.86474 7.81714 5.72116 8.19771 5.68758C8.26286 5.67716 8.31771 5.66558 8.38286 5.66558C10.2654 5.40855 12.1796 5.77102 13.8434 6.69958C13.8434 6.69958 12.9851 5.87516 11.1394 5.30316L11.2914 5.12716C11.2914 5.12716 12.7794 5.09358 14.3417 6.28274C14.3417 6.28274 15.9051 9.15316 15.9051 12.6952C15.9051 12.694 14.9829 14.2884 12.5829 14.366Z" fill="white" fill-opacity="0.6"/>
+                             <path d="M7.25495 9C6.55301 9 6 9.45024 6 10C6 10.5479 6.56596 11 7.25495 11C7.9556 11 8.5086 10.5479 8.5086 10C8.52285 9.44929 7.9556 9 7.25495 9ZM11.7463 9C11.0444 9 10.4914 9.45024 10.4914 10C10.4914 10.5479 11.0574 11 11.7463 11C12.447 11 13 10.5479 13 10C12.9987 9.44929 12.447 9 11.7463 9Z" fill="white" fill-opacity="0.6"/>
+                         </svg>
+                        </a>
+                    </li>   
+                    <li class="footer__row__social__li">
+                        <a target="_blank" href="https://t.me/ARGANO_DEFI">
+                             <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M18.65 0.111779L0.933877 7.03576C-0.275178 7.52794 -0.268184 8.21153 0.71205 8.51636L5.2605 9.95443L15.7843 3.22489C16.2819 2.91803 16.7365 3.08311 16.3628 3.41933L7.83648 11.2183H7.83448L7.83648 11.2193L7.52273 15.971C7.98237 15.971 8.18521 15.7573 8.44301 15.5052L10.6523 13.3278L15.2477 16.768C16.095 17.241 16.7036 16.9979 16.9144 15.973L19.931 1.56402C20.2398 0.30926 19.4584 -0.258877 18.65 0.111779Z" fill="white" fill-opacity="0.6"/>
+                             </svg>
+                        </a>
+                    </li>   
+                    <li class="footer__row__social__li">
+                        <a target="_blank" href="mailto:email@argano.io">
+                             <svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M19.2857 0H0.714286C0.524845 0 0.343164 0.0718343 0.209209 0.1997C0.0752549 0.327566 0 0.500989 0 0.681818V14.3182C0 14.499 0.0752549 14.6724 0.209209 14.8003C0.343164 14.9282 0.524845 15 0.714286 15H19.2857C19.4752 15 19.6568 14.9282 19.7908 14.8003C19.9247 14.6724 20 14.499 20 14.3182V0.681818C20 0.500989 19.9247 0.327566 19.7908 0.1997C19.6568 0.0718343 19.4752 0 19.2857 0ZM10.4384 8.72003C10.313 8.81305 10.1588 8.86355 10 8.86355C9.84122 8.86355 9.68696 8.81305 9.56161 8.72003L2.5692 3.52884L3.44598 2.45241L10 7.31804L16.554 2.45241L17.4308 3.52884L10.4384 8.72003Z" fill="white" fill-opacity="0.6"/>
+                             </svg>
+                        </a>
+                    </li>  
+                </ul>
+            </div>
+        </div>
+        <div class="footer__row">
+            <span>Copyright @ Argano Team 2021</span>
+        </div>
+    </footer>
+</body>
+<script>
+    openMenu();
+
+    window.onload = function() {
+        stopLoading()
+    };
+</script>
+</html>
